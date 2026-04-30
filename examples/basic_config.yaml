@@ -1,0 +1,17 @@
+output_dir: ./output
+random_seed: 17
+
+sampling:
+  method: latin_hypercube
+  n_design_points: 5
+
+parameters:
+  - name: eta_over_s
+    prior: uniform
+    bounds: [0.08, 0.24]
+  - name: tau0
+    prior: uniform
+    bounds: [0.2, 1.0]
+  - name: Tswitch
+    prior: uniform
+    bounds: [0.13, 0.18]
