@@ -1,0 +1,50 @@
+output_dir: ./iebe_design_output
+random_seed: 17
+
+sampling:
+  method: latin_hypercube
+  n_design_points: 256
+
+parameters:
+  - name: QsmuRatio
+    prior: uniform
+    bounds: [0.55, 0.90]
+  - name: tau0
+    prior: uniform
+    bounds: [0.20, 0.80]
+    output_names: [maxtime, Initial_time_tau_0]
+  - name: T_freeze
+    prior: uniform
+    bounds: [0.135, 0.165]
+  - name: shear_viscosity_3_eta_over_s_T_kink_in_GeV
+    prior: uniform
+    bounds: [0.150, 0.220]
+  - name: shear_viscosity_3_eta_over_s_low_T_slope_in_GeV
+    prior: uniform
+    bounds: [-2.00, 0.00]
+  - name: shear_viscosity_3_eta_over_s_high_T_slope_in_GeV
+    prior: uniform
+    bounds: [0.00, 2.00]
+  - name: shear_viscosity_3_eta_over_s_at_kink
+    prior: uniform
+    bounds: [0.04, 0.20]
+  - name: bulk_viscosity_10_max
+    prior: uniform
+    bounds: [0.00, 0.20]
+  - name: bulk_viscosity_10_width_low
+    prior: uniform
+    bounds: [0.010, 0.060]
+  - name: bulk_viscosity_10_width_high
+    prior: uniform
+    bounds: [0.030, 0.180]
+  - name: bulk_viscosity_10_T_peak
+    prior: uniform
+    bounds: [0.165, 0.220]
+
+bayes_file_sets:
+  - name: no_afterburner
+    fixed_parameters:
+      - name: perform_decays
+        value: 0
+  - name: decays
+  - name: urqmd
