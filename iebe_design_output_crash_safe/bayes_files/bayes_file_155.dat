@@ -1,0 +1,12 @@
+QsmuRatio 0.814028112559
+maxtime 0.349207725535
+Initial_time_tau_0 0.349207725535
+T_freeze 0.152040572236
+shear_viscosity_3_eta_over_s_T_kink_in_GeV 0.157770381584
+shear_viscosity_3_eta_over_s_low_T_slope_in_GeV -1.84136108504
+shear_viscosity_3_eta_over_s_high_T_slope_in_GeV 1.35925301014
+shear_viscosity_3_eta_over_s_at_kink 0.168086480642
+bulk_viscosity_10_max 0.0510478767521
+bulk_viscosity_10_width_low 0.0119622656881
+bulk_viscosity_10_width_high 0.139217037763
+bulk_viscosity_10_T_peak 0.192665309814
